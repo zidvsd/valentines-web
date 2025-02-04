@@ -6,21 +6,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap"
+    rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-
+            coralPink: '#F88379',
+            lightPink: '#FFB6C1',
+            lighterPink: '#F3CFC6',
+            customPink: '#FFC0CB',
+            coralPink: '#F88379',
+            hotPink: "#FF69B4",
+            pastelPink: "#FFD1DC",
+            classicPink: "#FFC0CB",
+            lavenderBlush: "#FFF0F5",
+            raspberry: "#D81B60"
           },
           container: {
             center: true,
             padding: '1rem',
           },
           fontFamily: {
-            poppins: [],
-            poppins: [],
+            poppins: ["Poppins", "cursive"],
+            lobster: ["Lobster", "cursive"],
+            nunito: ["Nunito", "cursive"],
+            sacramento: ["Sacramento", "cursive"],
+          },
+          screens: {
+            sm: '100%',  // Small screens will use full width
+            md: '1024px', // Medium screens will be limited to 1024px
+            lg: '1024px', // Large screens will also be limited to 1024px
+            xl: '1024px', // Extra large screens will be limited to 1024px
           }
 
         }
@@ -29,8 +51,66 @@
   </script>
 </head>
 
-<body>
+<body class="bg-lavenderBlush ">
+  <!-- header container for nav -->
+  <header class="container mx-auto flex flex-row text-raspberry mt-4 w-full justify-around items-center">
+    <!-- left navigation -->
+    <div class="left-nav flex flex-row gap-x-2">
+      <h1 class="font-sacramento text-raspberry text-5xl">Love</h1>
+      <img class="text-raspberry fill-current" src="/assets/icons/balloon-heart-fill.svg" alt="">
+    </div>
+    <!-- middle navigation -->
 
+    <div class="mid-nav hidden md:block">
+      <ul class="flex flex-row space-x-6 font-poppins font-semibold text-xl">
+        <a href="#">
+          <li class="hover:text-coralPink transition duration-200 ">Home</li>
+        </a>
+        <a href="#">
+          <li class="hover:text-coralPink transition duration-200 ">About</li>
+        </a><a href="#">
+          <li class="hover:text-coralPink transition duration-200 ">Album</li>
+        </a>
+      </ul>
+    </div>
+    <!-- right navigation -->
+    <!-- cta -->
+    <div class="right-nav hidden md:block">
+      <button class="px-8 py-2 bg-raspberry rounded-full text-lavenderBlush font-bold
+      hover:opacity-50 transition duration-300">
+        <a href="https://valentines-lemon-phi.vercel.app/" target="_blank">
+          Be my Valentine
+        </a>
+      </button>
+    </div>
+    <!-- hamburger menu on mobile -->
+    <div class="md:hidden">
+      <!-- burger button -->
+      <svg class="ham z-50 hamRotate ham1" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+        <path class="line top"
+          d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+        <path class="line middle" d="m 30,50 h 40" />
+        <path class="line bottom"
+          d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+      </svg>
+      <!-- overlay when menu is active -->
+      <div id="menu-overlay" class="menu absolute h-screen w-full bg-pastelPink top-0 left-0">
+        <div
+          class="overlay-nav absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 space-y-12 font-nunito font-bold text-3xl flex flex-col">
+          <a href="#" class="hover:text-coralPink transition duration-200">Home</a>
+          <a href="#" class="hover:text-coralPink transition duration-200">About</a>
+          <a href="#" class="hover:text-coralPink transition duration-200">Album</a>
+
+        </div>
+
+      </div>
+    </div>
+  </header>
+  <section id="main">
+    <div class="container mx-auto ">
+
+    </div>
+  </section>
   <script src="/js/script.js"></script>
 </body>
 
