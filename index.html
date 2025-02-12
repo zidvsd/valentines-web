@@ -74,13 +74,20 @@
       <!-- middle navigation -->
       <div class="mid-nav hidden md:block">
         <ul class="flex flex-row space-x-6 font-poppins font-semibold text-xl">
-          <a href="#">
+          <a href="#main">
             <li class="hover:text-coralPink transition duration-200 ">Home</li>
           </a>
-          <a href="#">
-            <li class="hover:text-coralPink transition duration-200 ">About</li>
-          </a><a href="#">
+          <a href="#song-player">
+            <li class="hover:text-coralPink transition duration-200 ">Music</li>
+          </a>
+          <a href="#memory-lane">
             <li class="hover:text-coralPink transition duration-200 ">Album</li>
+          </a>
+          <a href="#love-letter">
+            <li class="hover:text-coralPink transition duration-200 ">Notes</li>
+          </a>
+          <a href="#balloon">
+            <li class="hover:text-coralPink transition duration-200 ">Games</li>
           </a>
         </ul>
       </div>
@@ -109,9 +116,11 @@
         <div id="menu-overlay" class="menu fixed inset-0 bg-pastelPink overflow-hidden">
           <div
             class="overlay-nav absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 space-y-12 font-nunito font-bold text-3xl flex flex-col">
-            <a href="#" class="hover:text-coralPink transition duration-200">Home</a>
-            <a href="#" class="hover:text-coralPink transition duration-200">About</a>
-            <a href="#" class="hover:text-coralPink transition duration-200">Album</a>
+            <a href="#main" class="hover:text-coralPink transition duration-200">Home</a>
+            <a href="#song-player" class="hover:text-coralPink transition duration-200">Music</a>
+            <a href="#memory-lane" class="hover:text-coralPink transition duration-200">Album</a>
+            <a href="#love-letter" class="hover:text-coralPink transition duration-200">Notes</a>
+            <a href="#balloon" class="hover:text-coralPink transition duration-200">Games</a>
           </div>
         </div>
       </div>
@@ -293,7 +302,8 @@
         Love Letter
       </h1>
       <button id="type-effect" class="mt-4 px-8 py-2 font-poppins bg-raspberry rounded-full text-lavenderBlush font-bold
-        hover:opacity-50 transition duration-300 ">click me</button>
+        hover:opacity-50 transition duration-300 ">Click me!</button>
+
       <p class="font-poppins text-justify text-raspberry mt-12" id="love-letter-text"></p>
     </div>
   </section>
