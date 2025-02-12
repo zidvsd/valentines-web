@@ -1,3 +1,6 @@
+html {
+  scrollbar-width: thin;
+}
 .ham {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -68,15 +71,15 @@ svg {
   z-index: 100;
 }
 .swiper-pagination > span {
-  background-color: #d81b60;
+  background-color: #fffcf3;
 }
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  color: #d81b60; /* Change to your desired color */
+  color: #fffcf3; /* Change to your desired color */
 }
 .balloon {
   width: 100px;
-  height: 150px;
+  height: 120px;
   border-radius: 50%;
   position: absolute;
   animation: floatBalloon 6s ease-in-out infinite;
@@ -195,12 +198,16 @@ svg {
   object-fit: cover;
   margin: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   opacity: 0;
   transform: translateY(-20px);
   transition: all 0.5s ease;
 }
-
+.photo img {
+  padding: 0.7rem 0.7rem 3rem 0.7rem;
+  background-color: white;
+}
 .photo-container .photo.active {
   opacity: 1;
   transform: translateY(0);
@@ -219,9 +226,24 @@ svg {
     width: 43%; /* Two images per row on mobile */
   }
 }
+@media screen and (max-width: 768px) {
+  .photo img {
+    padding: 1rem 1rem 3rem 1rem;
+  }
+}
+
 #song-player button {
   transition: all 0.3s ease-in-out;
 }
 #song-player button:hover {
   opacity: 50%;
+}
+footer,
+.divider {
+  box-shadow: 0 -4px 8px -4px rgba(0, 0, 0, 0.3);
+}
+.divider {
+  height: 1px;
+  width: 100%;
+  background: #fffcf3;
 }

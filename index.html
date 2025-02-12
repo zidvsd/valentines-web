@@ -5,17 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Love</title>
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -45,16 +34,24 @@
             inter: ["Inter", "cursive"],
           },
           screens: {
-            sm: '100%',  // Small screens will use full width
-            md: '1024px', // Medium screens will be limited to 1024px
-            lg: '1024px', // Large screens will also be limited to 1024px
-            xl: '1024px', // Extra large screens will be limited to 1024px
           }
 
         }
       }
     }
   </script>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </head>
 
 <body class="bg-lavenderBlush ">
@@ -73,7 +70,7 @@
       </div>
       <!-- middle navigation -->
       <div class="mid-nav hidden md:block">
-        <ul class="flex flex-row space-x-6 font-poppins font-semibold text-xl">
+        <ul class="flex flex-row space-x-6 font-poppins font-semibold text-md lg:text-xl">
           <a href="#main">
             <li class="hover:text-coralPink transition duration-200 ">Home</li>
           </a>
@@ -115,7 +112,7 @@
         <!-- overlay when menu is active -->
         <div id="menu-overlay" class="menu fixed inset-0 bg-pastelPink overflow-hidden">
           <div
-            class="overlay-nav absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 space-y-12 font-nunito font-bold text-3xl flex flex-col">
+            class="overlay-nav absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 space-y-12 font-nunito font-bold text-3xl flex flex-col items-center">
             <a href="#main" class="hover:text-coralPink transition duration-200">Home</a>
             <a href="#song-player" class="hover:text-coralPink transition duration-200">Music</a>
             <a href="#memory-lane" class="hover:text-coralPink transition duration-200">Album</a>
@@ -163,12 +160,12 @@
 
   </section>
   <!-- song player -->
-  <section id="song-player">
-    <div class="container mx-auto  mt-12 flex flex-">
+  <section id="song-player" class="mt-32">
+    <div class="container mx-auto   flex flex-">
       <div class="grid grid-cols-2 gap-4 w-full max-w-xl mx-auto font-nunito ">
         <!-- lily of the valley -->
         <div
-          class="col-span-2 flex flex-row justify-around items-start bg-raspberry p-3 text-lavenderBlush rounded-md ">
+          class="col-span-2 flex flex-row justify-around items-start bg-raspberry p-3 text-lavenderBlush rounded-md md:p-5 ">
           <img src="/assets/images/song_player/1900x1900-000000-80-0-0.jpg" class="rounded-md object-cover size-32"
             alt="">
 
@@ -192,7 +189,7 @@
 
               <button id="lily-forward-btn"><img src="/assets/icons/skip-forward-fill.svg" alt="Forward"></button>
             </div>
-            <input type="range" id="song-seek" value="0" max="100" step="1"
+            <input type="range" id="lily-seek" value="0" max="100" step="1"
               class="w-11/12 self-center bg-lavenderBlush mt-4">
           </div>
         </div>
@@ -206,33 +203,57 @@
             <h1 class="font-bold">I Like Me Better</h1>
             <p class="font-inter text-xs font-regular">Lauv</p>
           </div>
-          <div class="audio-controls w-full flex flex row justify-between px-2 mt-4">
-            <button class="backward-btn"><img src="/assets/icons/skip-backward-fill.svg" alt=""></button>
-            <button id="like-me-btn"><img src="/assets/icons/play-fill.svg" alt=""></button>
-            <button class="forward-btn"><img src="/assets/icons/skip-forward-fill.svg" alt=""></button>
+          <div class="audio-controls w-full flex flex-row justify-around px-2 mt-4">
+            <button id="like-backward-btn"><img src="/assets/icons/skip-backward-fill.svg" alt="Backward"></button>
+
+            <button id="like-btn">
+              <!-- Pause button -->
+              <img id="like-pause-btn-img" class="hidden"
+                src="/assets/icons/pause_24dp_UNDEFINED_FILL0_wght400_GRAD0_opsz24.svg" alt="Pause">
+
+              <!-- Play button -->
+              <img id="like-btn-img" class="" src="/assets/icons/play-fill.svg" alt="Play">
+            </button>
+
+            <button id="like-forward-btn"><img src="/assets/icons/skip-forward-fill.svg" alt="Forward"></button>
           </div>
+          <input type="range" id="like-seek" value="0" max="100" step="1"
+            class="w-11/12 self-center bg-lavenderBlush mt-4">
         </div>
 
         <!-- nothing -->
         <div
           class="bg-raspberry flex flex-row justify-center items-center p-2 text-lavenderBlush rounded-md space-x-4 ">
           <div class="flex flex-col w-full gap-y-4">
-            <div class="flex flex-row w-full justify-center gap-x-4 items-center ">
+            <div class="flex flex-col w-full justify-center gap-x-4 items-center ">
               <img src="/assets/images/song_player/ab67616d0000b273e321a69d7454d9365c667187.jpeg"
                 class="rounded-md object-cover size-16" alt="">
-              <flex class="flex-col">
+              <div class="flex-col">
                 <h1 class="font-bold">Nothing</h1>
                 <p class="font-inter text-xs font-regular">Bruno Major</p>
-              </flex>
+              </div>
+              <div class="audio-controls w-full flex flex-row justify-around px-2 mt-4">
+                <button id="nothing-backward-btn"><img src="/assets/icons/skip-backward-fill.svg"
+                    alt="Backward"></button>
+
+                <button id="nothing-btn">
+                  <!-- Pause button -->
+                  <img id="nothing-pause-btn-img" class="hidden"
+                    src="/assets/icons/pause_24dp_UNDEFINED_FILL0_wght400_GRAD0_opsz24.svg" alt="Pause">
+
+                  <!-- Play button -->
+                  <img id="nothing-btn-img" class="" src="/assets/icons/play-fill.svg" alt="Play">
+                </button>
+
+                <button id="nothing-forward-btn"><img src="/assets/icons/skip-forward-fill.svg" alt="Forward"></button>
+              </div>
+              <input type="range" id="nothing-seek" value="0" max="100" step="1"
+                class="w-11/12 self-center bg-lavenderBlush mt-4">
+
             </div>
-            <div class="audio-controls w-full flex flex row justify-evenly">
-              <button class="backward-btn"><img src="/assets/icons/skip-backward-fill.svg" alt=""></button>
-              <button id="nothing-btn"><img src="/assets/icons/play-fill.svg" alt=""></button>
-              <button class="forward-btn"><img src="/assets/icons/skip-forward-fill.svg" alt=""></button>
-            </div>
+
           </div>
         </div>
-
         <!-- get you -->
         <div
           class="bg-raspberry flex flex-row justify-center items-center p-2 text-lavenderBlush rounded-md space-x-4 ">
@@ -240,16 +261,28 @@
             <div class="flex flex-row w-full justify-center items-center gap-x-4 ">
               <img src="/assets/images/song_player/Daniel-Caesar-2016-by-Keith-Henry-press-billboard-1548.webp"
                 class="rounded-md object-cover size-16" alt="">
-              <flex class="flex-col">
+              <div class="flex-col">
                 <h1 class="font-bold">Get You</h1>
                 <p class="font-inter text-xs font-regular">Daniel Caesar</p>
-              </flex>
+              </div>
             </div>
-            <div class="audio-controls w-full flex flex row justify-evenly">
-              <button class="backward-btn"><img src="/assets/icons/skip-backward-fill.svg" alt=""></button>
-              <button id="get-you-btn"><img src="/assets/icons/play-fill.svg" alt=""></button>
-              <button class="forward-btn"><img src="/assets/icons/skip-forward-fill.svg" alt=""></button>
+            <div class="audio-controls w-full flex flex-row justify-around px-2 mt-4">
+              <button id="get-backward-btn"><img src="/assets/icons/skip-backward-fill.svg" alt="Backward"></button>
+
+              <button id="get-btn">
+                <!-- Pause button -->
+                <img id="get-pause-btn-img" class="hidden"
+                  src="/assets/icons/pause_24dp_UNDEFINED_FILL0_wght400_GRAD0_opsz24.svg" alt="Pause">
+
+                <!-- Play button -->
+                <img id="get-btn-img" class="" src="/assets/icons/play-fill.svg" alt="Play">
+              </button>
+
+              <button id="get-forward-btn"><img src="/assets/icons/skip-forward-fill.svg" alt="Forward"></button>
             </div>
+            <input type="range" id="get-seek" value="0" max="100" step="1"
+              class="w-11/12 self-center bg-lavenderBlush mt-4">
+
           </div>
         </div>
 
@@ -257,9 +290,9 @@
       </div>
   </section>
   <!-- memory section -->
-  <section id="memory-lane" class="mt-12 mb-32">
-    <div class="container mx-auto">
-      <h1 class="font-bold text-raspberry font-poppins text-3xl text-center">
+  <section id="memory-lane" class="mt-32 mb-32 bg-raspberry pb-16">
+    <div class="container mx-auto pt-6">
+      <h1 class="font-bold text-lavenderBlush font-poppins text-3xl text-center">
         Memory Lane
       </h1>
       <div class="swiper mt-6 ">
@@ -341,9 +374,9 @@
 
 
   </section>
-
+  <!-- camera developer -->
   <!-- https://codepen.io/abxlfazl/pen/YzGEVRP -->
-  <section id="music-player-section " class="mt-12 ">
+  <section id="photobooth-section " class="mt-12 ">
     <div class="container mx-auto">
       <h1 class="font-bold text-raspberry font-poppins text-3xl text-center">
         Photobooth
@@ -363,9 +396,90 @@
 
     </div>
   </section>
-  <!-- camera developer -->
-  <script src="/js/script.js"></script>
 
+  <!-- footer section -->
+  <footer id="footer" class="bg-raspberry font-poppins mt-32">
+    <div class="container w-full  mx-auto flex flex-col pt-12 ">
+      <div class="w-full flex flex-col md:flex-row  text-lavenderBlush justify-between align-top">
+        <div class="about-me mt-4 md:mt-0 text-center md:text-left ">
+          <h1 class="font-bold text-2xl">About Yvonne</h1>
+          <p class="mt-4 font-inter font-regular leading-8">
+            Yvonne Paola T. Fujiwara, <br>
+            a 2nd year Nursing student, <br>
+            who loves to travel, play video games, <br>
+            express herself through fashion and makeup, <br>
+            and spend time with her boyfriend.
+          </p>
+        </div>
+        <div class="skills mt-10 md:mt-0 text-center ">
+          <h1 class="font-bold text-2xl">Note</h1>
+          <p class="mt-4 font-inter font-regular leading-8">
+            Hi, Loveee! <br>
+            I hope you enjoyed it hehe. <br>
+            I'll make bawi if nagkita na us, promise! <br>
+            I love you so much!
+          </p>
+        </div>
+        <div class="follow-me mt-10 md:mt-0 text-center  ">
+          <h1 class="font-bold text-2xl md:text-center">Her Socials</h1>
+          <div class="flex flex-row gap-x-12 items-center mt-4 justify-center w-full">
+            <a class="transition duration-300 hover:opacity-50" target="_blank"
+              href="https://www.facebook.com/yvonne.fujiwara.2024"><img class="size-10" src="/assets/icons/facebook.svg"
+                alt=""></a>
+            <a class="transition duration-300 hover:opacity-50" target="_blank"
+              href="https://www.instagram.com/yvnneefujiwara/"><img class="size-10" src="/assets/icons/instagram.svg"
+                alt=""></a>
+            <a class="transition duration-300 hover:opacity-50" target="_blank" href=""><img class="size-10"
+                src="/assets/icons/pinterest.svg" alt=""></a>
+          </div>
+          <button class="mt-8 px-8 py-2 bg-lavenderBlush  rounded-full text-raspberry font-bold
+                  hover:opacity-50 transition duration-300">
+            <a href="#footer">
+              Contact Her
+            </a>
+          </button>
+        </div>
+      </div>
+
+      <!-- social links -->
+      <!-- contact me btn -->
+
+
+
+      <div class="bottom-nav w-full mt-12 overflow-hidden ">
+        <div class="divider"></div>
+        <div class="w-full flex flex-col justify-start  md:justify-between md:flex-row items-center mt-12">
+          <ul class="flex text-sm flex-row items-center font-bold gap-x-6 text-lavenderBlush md:text-md lg:text-xl">
+            <a href="#main">
+              <li class="hover:text-coralPink transition duration-200 ">Home</li>
+            </a>
+            <a href="#song-player">
+              <li class="hover:text-coralPink transition duration-200 ">Music</li>
+            </a>
+            <a href="#memory-lane">
+              <li class="hover:text-coralPink transition duration-200 ">Album</li>
+            </a>
+            <a href="#love-letter">
+              <li class="hover:text-coralPink transition duration-200 ">Notes</li>
+            </a>
+            <a href="#balloon">
+              <li class="hover:text-coralPink transition duration-200 ">Games</li>
+            </a>
+          </ul>
+          <div class="flex flex-row gap-x-4 items-center mt-12 md:mt-0">
+            <h1 class="font-sacramento text-lavenderBlush text-5xl">Love</h1>
+            <img class="text-lavenderBlush fill-current" src="/assets/icons/balloon-heart-fill footer.svg" alt="">
+          </div>
+          <div class="copyright-footer mt-10 md:mt-0 ">
+            <h1 class="text-lavenderBlush">&copy; 2025. All Rights Reserved.</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/script.js"></script>
+  <script src="/js/musicplayer.js"></script>
 </body>
 
 </html>
