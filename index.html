@@ -8,8 +8,10 @@
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -40,6 +42,7 @@
             lobster: ["Lobster", "cursive"],
             nunito: ["Nunito", "cursive"],
             sacramento: ["Sacramento", "cursive"],
+            inter: ["Inter", "cursive"],
           },
           screens: {
             sm: '100%',  // Small screens will use full width
@@ -56,7 +59,7 @@
 
 <body class="bg-lavenderBlush ">
   <!-- audio  -->
-  <audio autoplay id="audioPlayer" src="/assets/audio/daniel-lily-of-the-valley_Lo6Dc6iV.mp3"></audio>
+  <!-- <audio autoplay id="audioPlayer" src="/assets/audio/daniel-lily-of-the-valley_Lo6Dc6iV.mp3"></audio> -->
   <!-- header container for nav -->
   <div id="full-page " class="relative container ">
     <header
@@ -150,6 +153,100 @@
     </div>
 
   </section>
+  <!-- song player -->
+  <section id="song-player">
+    <div class="container mx-auto  mt-12 flex flex-">
+      <div class="grid grid-cols-2 gap-4 w-full max-w-xl mx-auto font-nunito ">
+        <!-- lily of the valley -->
+        <div
+          class="col-span-2 flex flex-row justify-around items-start bg-raspberry p-3 text-lavenderBlush rounded-md ">
+          <img src="/assets/images/song_player/1900x1900-000000-80-0-0.jpg" class="rounded-md object-cover size-32"
+            alt="">
+
+          <div class="flex flex-col w-full mt-2">
+            <div class="flex flex-col justify-center items-center">
+              <h1 class="font-bold">Lily of the Valley</h1>
+              <p class="font-inter text-xs font-regular">DANIEL</p>
+            </div>
+
+            <div class="audio-controls w-full flex flex-row justify-around px-2 mt-4">
+              <button id="lily-backward-btn"><img src="/assets/icons/skip-backward-fill.svg" alt="Backward"></button>
+
+              <button id="lily-btn">
+                <!-- Pause button -->
+                <img id="lily-pause-btn-img" class="hidden"
+                  src="/assets/icons/pause_24dp_UNDEFINED_FILL0_wght400_GRAD0_opsz24.svg" alt="Pause">
+
+                <!-- Play button -->
+                <img id="lily-btn-img" class="" src="/assets/icons/play-fill.svg" alt="Play">
+              </button>
+
+              <button id="lily-forward-btn"><img src="/assets/icons/skip-forward-fill.svg" alt="Forward"></button>
+            </div>
+            <input type="range" id="song-seek" value="0" max="100" step="1"
+              class="w-11/12 self-center bg-lavenderBlush mt-4">
+          </div>
+        </div>
+
+        <!-- i like me better -->
+        <div
+          class="row-span-2 flex flex-col justify-start items-center bg-raspberry px-4 py-12 text-lavenderBlush rounded-md ">
+          <img src="/assets/images/song_player/artworks-000277588343-7gcl6y-t1080x1080.jpg"
+            class="rounded-md object-cover" alt="">
+          <div class="flex flex-col justify-start items-start w-full mt-4 pl-2 ">
+            <h1 class="font-bold">I Like Me Better</h1>
+            <p class="font-inter text-xs font-regular">Lauv</p>
+          </div>
+          <div class="audio-controls w-full flex flex row justify-between px-2 mt-4">
+            <button class="backward-btn"><img src="/assets/icons/skip-backward-fill.svg" alt=""></button>
+            <button id="like-me-btn"><img src="/assets/icons/play-fill.svg" alt=""></button>
+            <button class="forward-btn"><img src="/assets/icons/skip-forward-fill.svg" alt=""></button>
+          </div>
+        </div>
+
+        <!-- nothing -->
+        <div
+          class="bg-raspberry flex flex-row justify-center items-center p-2 text-lavenderBlush rounded-md space-x-4 ">
+          <div class="flex flex-col w-full gap-y-4">
+            <div class="flex flex-row w-full justify-center gap-x-4 items-center ">
+              <img src="/assets/images/song_player/ab67616d0000b273e321a69d7454d9365c667187.jpeg"
+                class="rounded-md object-cover size-16" alt="">
+              <flex class="flex-col">
+                <h1 class="font-bold">Nothing</h1>
+                <p class="font-inter text-xs font-regular">Bruno Major</p>
+              </flex>
+            </div>
+            <div class="audio-controls w-full flex flex row justify-evenly">
+              <button class="backward-btn"><img src="/assets/icons/skip-backward-fill.svg" alt=""></button>
+              <button id="nothing-btn"><img src="/assets/icons/play-fill.svg" alt=""></button>
+              <button class="forward-btn"><img src="/assets/icons/skip-forward-fill.svg" alt=""></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- get you -->
+        <div
+          class="bg-raspberry flex flex-row justify-center items-center p-2 text-lavenderBlush rounded-md space-x-4 ">
+          <div class="flex flex-col w-full gap-y-4">
+            <div class="flex flex-row w-full justify-center items-center gap-x-4 ">
+              <img src="/assets/images/song_player/Daniel-Caesar-2016-by-Keith-Henry-press-billboard-1548.webp"
+                class="rounded-md object-cover size-16" alt="">
+              <flex class="flex-col">
+                <h1 class="font-bold">Get You</h1>
+                <p class="font-inter text-xs font-regular">Daniel Caesar</p>
+              </flex>
+            </div>
+            <div class="audio-controls w-full flex flex row justify-evenly">
+              <button class="backward-btn"><img src="/assets/icons/skip-backward-fill.svg" alt=""></button>
+              <button id="get-you-btn"><img src="/assets/icons/play-fill.svg" alt=""></button>
+              <button class="forward-btn"><img src="/assets/icons/skip-forward-fill.svg" alt=""></button>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+  </section>
   <!-- memory section -->
   <section id="memory-lane" class="mt-12 mb-32">
     <div class="container mx-auto">
@@ -207,7 +304,8 @@
       <button id="note-generator-btn"
         class="mt-4 px-8 py-2 font-poppins bg-raspberry rounded-full text-lavenderBlush font-bold hover:opacity-50 transition duration-300 ">Generate
         a note</button>
-      <div id="note-container" class=" mt-12 bg-white w-full rounded-md py-2 px-8 font-poppins text-raspberry md:w-1/2">
+      <div id="note-container"
+        class=" mt-12 bg-white h-24 w-full flex justify-center items-center rounded-md py-2 px-8 font-poppins text-raspberry text-xl md:w-1/2">
         <p id="note-text"></p>
       </div>
     </div>
@@ -233,9 +331,9 @@
 
 
   </section>
-  <!-- song player -->
+
   <!-- https://codepen.io/abxlfazl/pen/YzGEVRP -->
-  <section id="music-player-section " class="mt-12 border">
+  <section id="music-player-section " class="mt-12 ">
     <div class="container mx-auto">
       <h1 class="font-bold text-raspberry font-poppins text-3xl text-center">
         Photobooth

@@ -1,5 +1,7 @@
 const menuBtn = document.querySelector(".ham");
 const menuOverlay = document.getElementById("menu-overlay");
+
+// love letter section
 const typeEffect = document.getElementById("type-effect");
 const loveLetter = document.getElementById("love-letter-text");
 var text =
@@ -22,12 +24,69 @@ menuBtn.addEventListener("click", () => {
   console.log("dasd");
   menuOverlay.classList.toggle("open");
 });
+// main sound
+// const audioPlayer = document.getElementById("audioPlayer");
 
-const audioPlayer = document.getElementById("audioPlayer");
+// // Set volume to a lower value when the audio starts playing
+// audioPlayer.volume = 0.3;
 
-// Set volume to a lower value when the audio starts playing
-audioPlayer.volume = 0.3;
+// audio player section
+const backDuration = 10;
+const forwardDuration = 10;
 
+const likeMeBetterBtn = document.getElementById("like-me-btn");
+const nothingBtn = document.getElementById("nothing-btn");
+const getYouBtn = document.getElementById("get-you-btn");
+
+// lily valley audio player
+const lilyBtn = document.getElementById("lily-btn");
+const lilyPlayBtnImg = document.getElementById("lily-btn-img");
+const lilyPauseBtn = document.getElementById("lily-pause-btn-img");
+const lilyAudio = new Audio(
+  "assets/audio/daniel-lily-of-the-valley_Lo6Dc6iV.mp3"
+);
+const songProgress = document.getElementById("song-progress");
+const songSeek = document.getElementById("song-seek");
+const lilyBackBtn = document.getElementById("lily-backward-btn");
+const lilyFowardBtn = document.getElementById("lily-forward-btn");
+lilyBtn.addEventListener("click", () => {
+  if (lilyAudio.paused) {
+    lilyAudio.volume = 0.2;
+    lilyAudio.play();
+  } else {
+    lilyAudio.pause();
+  }
+  // Toggle the visibility of the play and pause buttons
+  lilyPauseBtn.classList.toggle("hidden", lilyAudio.paused); // Show pause button when not playing
+  lilyPlayBtnImg.classList.toggle("hidden", !lilyAudio.paused); // Show play button when paused
+});
+
+lilyAudio.addEventListener("timeupdate", () => {
+  // Calculate the progress as a percentage
+  const progress = (lilyAudio.currentTime / lilyAudio.duration) * 100;
+  songSeek.value = progress; // Update the progress bar
+});
+// backwards button
+lilyBackBtn.addEventListener("click", () => {
+  lilyAudio.currentTime = Math.max(0, lilyAudio.currentTime - backDuration);
+});
+lilyFowardBtn.addEventListener("click", () => {
+  lilyAudio.currentTime = Math.max(0, lilyAudio.currentTime + forwardDuration);
+});
+
+// Seek to the new time when the user interacts with the range input
+songSeek.addEventListener("input", () => {
+  const seekTime = (songSeek.value / 100) * lilyAudio.duration; // Calculate the time based on range input
+  lilyAudio.currentTime = seekTime; // Update the audio's current time
+});
+
+lilyAudio.addEventListener("ended", () => {
+  lilyPauseBtn.classList.add("hidden");
+  lilyPlayBtnImg.classList.remove("hidden");
+  songSeek.value = 0;
+});
+
+// memory lane section
 new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",

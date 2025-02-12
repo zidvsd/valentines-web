@@ -219,3 +219,9 @@ svg {
     width: 43%; /* Two images per row on mobile */
   }
 }
+#song-player button {
+  transition: all 0.3s ease-in-out;
+}
+#song-player button:hover {
+  opacity: 50%;
+}
