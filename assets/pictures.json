@@ -2,83 +2,71 @@
   "pictures": [
     {
       "id": 1,
-      "url": "https://picsum.photos/200/300?image=0"
+      "url": "assets/images/solo/0b189c4d-c3d5-4f2b-966b-c20dda495152.jpeg"
     },
     {
       "id": 2,
-      "url": "https://picsum.photos/200/300?image=1"
+      "url": "assets/images/solo/2d40c8b9-8d5b-4b8a-b807-308d04392185.jpeg"
     },
     {
       "id": 3,
-      "url": "https://picsum.photos/200/300?image=2"
+      "url": "assets/images/solo/5da5bc1d-3046-4b4f-9108-40f18a6dff52.jpeg"
     },
     {
       "id": 4,
-      "url": "https://picsum.photos/200/300?image=3"
+      "url": "assets/images/solo/9b5a80a7-9380-4ad1-b7e5-46285b7a1d92.jpeg"
     },
     {
       "id": 5,
-      "url": "https://picsum.photos/200/300?image=4"
+      "url": "assets/images/solo/84b05aa2-76cf-4ee6-a537-7ac8be6c41fc.jpeg"
     },
     {
       "id": 6,
-      "url": "https://picsum.photos/200/300?image=5"
+      "url": "assets/images/solo/233e2849-9fe1-41c3-abe4-30bc8dce764b.jpeg"
     },
     {
       "id": 7,
-      "url": "https://picsum.photos/200/300?image=6"
+      "url": "assets/images/solo/656a8d0c-7e9d-4fcc-8849-63209411432b.jpeg"
     },
     {
       "id": 8,
-      "url": "https://picsum.photos/200/300?image=7"
+      "url": "assets/images/solo/821b096a-6828-4824-81a5-24243e6a1666.jpeg"
     },
     {
       "id": 9,
-      "url": "https://picsum.photos/200/300?image=8"
+      "url": "assets/images/solo/992e46d3-73ab-4831-b042-557314261dfe.jpeg"
     },
     {
       "id": 10,
-      "url": "https://picsum.photos/200/300?image=9"
+      "url": "assets/images/solo/46163663-4e6a-4bc8-9323-9bc165cf014e.jpeg"
     },
     {
       "id": 11,
-      "url": "https://picsum.photos/200/300?image=10"
+      "url": "assets/images/solo/441252224_1098405864794447_5650392037480007439_n.jpg"
     },
     {
       "id": 12,
-      "url": "https://picsum.photos/200/300?image=11"
+      "url": "assets/images/solo/baed5d4c-f8f3-46ab-b31a-1d3b204d83a9.jpeg"
     },
     {
       "id": 13,
-      "url": "https://picsum.photos/200/300?image=12"
+      "url": "assets/images/solo/c497d714-2c3a-490b-ad61-421b1edc5ab4.jpeg"
     },
     {
       "id": 14,
-      "url": "https://picsum.photos/200/300?image=13"
+      "url": "assets/images/solo/d31268af-77d3-453c-b345-3ad9a5a681e1.jpeg"
     },
     {
       "id": 15,
-      "url": "https://picsum.photos/200/300?image=14"
+      "url": "assets/images/solo/e0fe2df7-09f8-4dbc-8402-233742b8c029.jpeg"
     },
     {
       "id": 16,
-      "url": "https://picsum.photos/200/300?image=15"
+      "url": "assets/images/solo/a04d8c6e-9c88-45f1-9857-3d7522afd1b0.jpeg"
     },
     {
       "id": 17,
-      "url": "https://picsum.photos/200/300?image=16"
-    },
-    {
-      "id": 18,
-      "url": "https://picsum.photos/200/300?image=17"
-    },
-    {
-      "id": 19,
-      "url": "https://picsum.photos/200/300?image=18"
-    },
-    {
-      "id": 20,
-      "url": "https://picsum.photos/200/300?image=19"
+      "url": "assets/images/solo/e1cbac35-7052-421e-a164-ad3e18c126ff.jpeg"
     }
   ]
 }

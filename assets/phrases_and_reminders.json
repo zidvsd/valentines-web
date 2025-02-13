@@ -1,122 +1,82 @@
 [
-    {
-        "id": 1,
-        "content": "Take it one step at a time."
-    },
-    {
-        "id": 2,
-        "content": "You are enough just as you are."
-    },
-    {
-        "id": 3,
-        "content": "Believe in yourself and all that you are."
-    },
-    {
-        "id": 4,
-        "content": "Today is a new opportunity for greatness."
-    },
-    {
-        "id": 5,
-        "content": "Progress, not perfection."
-    },
-    {
-        "id": 6,
-        "content": "You\u2019ve got this! Keep going."
-    },
-    {
-        "id": 7,
-        "content": "Focus on the present moment."
-    },
-    {
-        "id": 8,
-        "content": "Stay positive and good things will happen."
-    },
-    {
-        "id": 9,
-        "content": "Growth happens outside your comfort zone."
-    },
-    {
-        "id": 10,
-        "content": "Take a deep breath, and trust the process."
-    },
-    {
-        "id": 11,
-        "content": "Your potential is limitless."
-    },
-    {
-        "id": 12,
-        "content": "Mistakes are just lessons in disguise."
-    },
-    {
-        "id": 13,
-        "content": "Choose happiness over everything."
-    },
-    {
-        "id": 14,
-        "content": "You are capable of amazing things."
-    },
-    {
-        "id": 15,
-        "content": "Every day is a fresh start."
-    },
-    {
-        "id": 16,
-        "content": "Small steps lead to big changes."
-    },
-    {
-        "id": 17,
-        "content": "Self-care is not selfish, it's essential."
-    },
-    {
-        "id": 18,
-        "content": "You are worthy of all the love and success."
-    },
-    {
-        "id": 19,
-        "content": "Do it for yourself, not for others."
-    },
-    {
-        "id": 20,
-        "content": "Your hard work will pay off."
-    },
-    {
-        "id": 21,
-        "content": "Surround yourself with positivity."
-    },
-    {
-        "id": 22,
-        "content": "Don\u2019t be afraid to start over."
-    },
-    {
-        "id": 23,
-        "content": "It\u2019s okay to take breaks; it\u2019s okay to rest."
-    },
-    {
-        "id": 24,
-        "content": "You\u2019re stronger than you think."
-    },
-    {
-        "id": 25,
-        "content": "You are the architect of your own future."
-    },
-    {
-        "id": 26,
-        "content": "Stay patient and trust your journey."
-    },
-    {
-        "id": 27,
-        "content": "Great things take time."
-    },
-    {
-        "id": 28,
-        "content": "Believe in your dreams, they know the way."
-    },
-    {
-        "id": 29,
-        "content": "Let go of what you can't control."
-    },
-    {
-        "id": 30,
-        "content": "Every setback is a setup for a comeback."
-    }
+  {
+    "id": 1,
+    "content": "Sana kumain ka na while reading this..."
+  },
+  {
+    "id": 2,
+    "content": "Always keep hydrated pls!!"
+  },
+  {
+    "id": 3,
+    "content": "Ikaw lang lagi love ko"
+  },
+  {
+    "id": 4,
+    "content": "I'm always looking forward to ur messages each time I wake up."
+  },
+  {
+    "id": 5,
+    "content": "You don’t have to be perfect you're already perfect for me hehe"
+  },
+  {
+    "id": 6,
+    "content": "You always got it and nandito me lagi."
+  },
+  {
+    "id": 7,
+    "content": "I love you more than ever."
+  },
+  {
+    "id": 8,
+    "content": "Just always find ur way back to me."
+  },
+  {
+    "id": 9,
+    "content": "With you, every challenge feels a little easier."
+  },
+  {
+    "id": 10,
+    "content": "Love will always find its way back. "
+  },
+  {
+    "id": 11,
+    "content": "My love for you knows no bounds."
+  },
+  {
+    "id": 12,
+    "content": "Every mistake is just another reason to hold you even closer."
+  },
+  {
+    "id": 13,
+    "content": "Happiness is easy when I’m with you."
+  },
+  {
+    "id": 14,
+    "content": "You are capable of the most amazing things."
+  },
+  {
+    "id": 15,
+    "content": "Every day is a fresh start, and every day I choose you."
+  },
+  {
+    "id": 16,
+    "content": "I can't wait to travel with you!"
+  },
+  {
+    "id": 17,
+    "content": "Taking care of yourself means I get to love you even longer."
+  },
+  {
+    "id": 18,
+    "content": "You deserve all the love in the world—starting with mine."
+  },
+  {
+    "id": 19,
+    "content": "Do what makes you happy, love, and I’ll be right here cheering for you."
+  },
+  {
+    "id": 20,
+    "content": "Your hard work will pay off, and I’ll be there to celebrate every milestone with you."
+  }
 ]

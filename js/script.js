@@ -9,7 +9,13 @@ menuBtn.addEventListener("click", () => {
 const typeEffect = document.getElementById("type-effect");
 const loveLetter = document.getElementById("love-letter-text");
 var text =
-  "Lorem ipsum typing effect! Lorem ipsum typing effect!Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor tortor eu ipsum ultrices, sit amet tincidunt ipsum sagittis. Nunc tortor nunc, sollicitudin et orci convallis, ullamcorper egestas eros. Cras imperdiet lobortis nulla a sodales. Proin a risus nec justo dignissim maximus in et velit. In blandit odio metus, eu dignissim mauris finibus quis. Phasellus porta magna eget fermentum ullamcorper. Donec a congue nibh. Sed urna ex, commodo sit amet justo eget, cursus dictum urna. Mauris in ligula sit amet lacus mollis ullamcorper. Sed fringilla ipsum eu condimentum eleifend. Pellentesque commodo, nisl at sagittis laoreet, augue quam laoreet mi, eget rutrum quam nibh vitae felis. Aliquam tincidunt congue velit, eget scelerisque enim volutpat sed. Praesent sit amet massa nec nisl sollicitudin auctor sed tristique dolor. Nunc vitae nisi eget sem ultrices cursus. Donec ac ipsum vitae eros imperdiet cursus eget sit amet ipsum.Sed magna libero, mollis ullamcorper laoreet commodo, elementum faucibus augue. Mauris sed efficitur diam. Suspendisse mattis leo id sem porttitor mattis. Quisque dignissim metus at tortor accumsan aliquam. In sodales molestie augue sed aliquam. Morbi ornare enim nunc, nec faucibus ligula pulvinar non. Donec pharetra velit ut ante feugiat bibendum. Pellentesque semper ullamcorper orci dictum pellentesque. Vivamus ullamcorper posuere imperdiet. Cras auctor faucibus tellus a sodales. Mauris molestie tempor nisl eu pharetra. Nulla luctus hendrerit eros sed interdum. Aenean nibh elit, tempus non tortor eget, molestie iaculis purus.Nulla eget tortor a eros cursus dapibus non vitae libero. Phasellus malesuada semper mauris sit amet pulvinar. Fusce quam purus, luctus quis diam sagittis, faucibus finibus arcu. Nulla rutrum neque vel risus dictum malesuada ac porta est. Donec nibh enim, varius sed mi ut, tempor accumsan elit. Aenean sed metus vestibulum, rutrum eros eu, vestibulum nulla. Vestibulum aliquam mauris eu velit ullamcorper, cursus pretium dolor ultricies. Curabitur nulla libero, hendrerit et suscipit in, volutpat ut nunc. Mauris ut ex id dui sollicitudin lacinia. Morbi vel ultricies justo. Phasellus vitae vehicula ante, rhoncus vehicula mi. Nulla tristique lectus ac leo suscipit posuere. Nam condimentum ante sit amet quam finibus convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer cursus odio ut magna dignissim, id ornare augue congue. Mauris eget magna non enim semper laoreet quis nec libero.";
+  "Happy Valentine's, loveee!! This is our first Valentine's together, and it makes my heart raceee. I hope you're having fun browsing through this website this was the least I could do, huhu. I just want to remind you how much I appreciate you and everything you do for meeee. You have no idea how much you mean to me, and I honestly feel so greatful to have you in my life. " +
+  "Despite our long-distance relationship, you never fail to make me feel loved every day. Istg, even though we're miles apart, you still make me feel like you're right beside me. The way you cheer me up whenever I'm feeling down, how you reassure me when I'm filled with uncertainty, and the way you love me it's everything I could ever ask for. " +
+  +"Tbh, I didn't expect our relationship to work out at first, not because I doubted us, but because I never thought I'd be able to find something this special. But you proved me wrong. You made me realize that love isn't just about being physically together; it's about our bond, our effort, and our  cute little moments that make everything worth it. " +
+  "The day I first saw you, I was in awe. I never thought being as beautiful as you was humanly possible. And every time we're together, I catch myself staring at you, completely mesmerized by your gorgeous smile, your kind eyes, and just... you. I swear, you're like a dream I never want to wake up from. " +
+  "Of course, like everyone else, we have our own share of dilemmas. There are moments when we get frustrated, when things don't go as planned, and when words come out wrong. But what I love most is how we always find a way back to each other. No matter how small or big the issue is, we talk it out and choose to understand each other. And through it all, you never fail to remind me that we're in this together, that no matter what, we'll always find our way out. " +
+  "No matter how far we are from each other right now, I want you to know that you are always in my heart. I can't wait to see you and get to spend Valentine's together irl, where I can hold you close and tell you all of this f2f. Until then, just know that I love you more than words can ever express.";
+
 var speed = 50;
 var i = 0;
 typeEffect.addEventListener("click", () => {
@@ -24,240 +30,11 @@ typeEffect.addEventListener("click", () => {
   typeEffect.style.cursor = "default";
 });
 
-// music player section
-
-// 10 seconds backward forward
-const backDuration = 10;
-const forwardDuration = 10;
-// Audio elements
-const lilyAudio = new Audio(
-  "assets/audio/daniel-lily-of-the-valley_Lo6Dc6iV.mp3"
-);
-const likeAudio = new Audio(
-  "assets/audio/Lauv - I Like Me Better [Official Audio].mp3"
-);
-const nothingAudio = new Audio(
-  "assets/audio/Bruno Major - Nothing (Lyric & Chord Video).mp3"
-);
-const getYouAudio = new Audio(
-  "assets/audio/Get You (feat. Kali Uchis) (1).mp3"
-);
-
-// lily valley audio player
-// Audio elements for "Lily of the Valley"
-const lilyBtn = document.getElementById("lily-btn");
-const lilyPlayBtnImg = document.getElementById("lily-btn-img");
-const lilyPauseBtn = document.getElementById("lily-pause-btn-img");
-
-const lilyProgress = document.getElementById("lily-progress"); // For progress bar
-const lilySeek = document.getElementById("lily-seek"); // For seek input
-const lilyBackBtn = document.getElementById("lily-backward-btn");
-const lilyFowardBtn = document.getElementById("lily-forward-btn");
-
-// Play/Pause button for Lily audio
-lilyBtn.addEventListener("click", () => {
-  if (lilyAudio.paused) {
-    lilyAudio.volume = 0.4;
-    lilyAudio.play();
-  } else {
-    lilyAudio.pause();
-  }
-  lilyPauseBtn.classList.toggle("hidden", lilyAudio.paused);
-  lilyPlayBtnImg.classList.toggle("hidden", !lilyAudio.paused);
-});
-
-lilyAudio.addEventListener("timeupdate", () => {
-  const progress = (lilyAudio.currentTime / lilyAudio.duration) * 100;
-  lilySeek.value = progress; // Update seek input
-});
-
-// Backward button
-lilyBackBtn.addEventListener("click", () => {
-  lilyAudio.currentTime = Math.max(0, lilyAudio.currentTime - backDuration);
-});
-
-// Forward button
-lilyFowardBtn.addEventListener("click", () => {
-  lilyAudio.currentTime = Math.max(0, lilyAudio.currentTime + forwardDuration);
-});
-
-// Seek to the new time when the user interacts with the range input
-lilySeek.addEventListener("input", () => {
-  const seekTime = (lilySeek.value / 100) * lilyAudio.duration; // Calculate time from range input
-  lilyAudio.currentTime = seekTime; // Update audio time
-});
-
-// Reset on audio end
-lilyAudio.addEventListener("ended", () => {
-  lilyPauseBtn.classList.add("hidden");
-  lilyPlayBtnImg.classList.remove("hidden");
-  lilySeek.value = 0;
-});
-
-// Audio elements for "I Like Me Better"
-const likeBtn = document.getElementById("like-btn");
-const likePlayBtnImg = document.getElementById("like-btn-img");
-const likePauseBtn = document.getElementById("like-pause-btn-img");
-
-const likeProgress = document.getElementById("like-progress"); // For progress bar
-const likeSeek = document.getElementById("like-seek"); // For seek input
-const likeBackBtn = document.getElementById("like-backward-btn");
-const likeFowardBtn = document.getElementById("like-forward-btn");
-
-// Play/Pause button for Like Me Better audio
-likeBtn.addEventListener("click", () => {
-  if (likeAudio.paused) {
-    likeAudio.volume = 0.3;
-    likeAudio.play();
-  } else {
-    likeAudio.pause();
-  }
-  likePauseBtn.classList.toggle("hidden", likeAudio.paused);
-  likePlayBtnImg.classList.toggle("hidden", !likeAudio.paused);
-});
-
-likeAudio.addEventListener("timeupdate", () => {
-  const progress = (likeAudio.currentTime / likeAudio.duration) * 100;
-  likeSeek.value = progress; // Update seek input
-});
-
-// Backward button
-likeBackBtn.addEventListener("click", () => {
-  likeAudio.currentTime = Math.max(0, likeAudio.currentTime - backDuration);
-});
-
-// Forward button
-likeFowardBtn.addEventListener("click", () => {
-  likeAudio.currentTime = Math.max(0, likeAudio.currentTime + forwardDuration);
-});
-
-// Seek to the new time when the user interacts with the range input
-likeSeek.addEventListener("input", () => {
-  const seekTime = (likeSeek.value / 100) * likeAudio.duration; // Calculate time from range input
-  likeAudio.currentTime = seekTime; // Update audio time
-});
-
-// Reset on audio end
-likeAudio.addEventListener("ended", () => {
-  likePauseBtn.classList.add("hidden");
-  likePlayBtnImg.classList.remove("hidden");
-  likeSeek.value = 0;
-});
-
-// nothing audio player
-const nothingBtn = document.getElementById("nothing-btn");
-const nothingPlayBtnImg = document.getElementById("nothing-btn-img");
-const nothingPauseBtn = document.getElementById("nothing-pause-btn-img");
-
-const nothingProgress = document.getElementById("nothing-progress"); // Progress bar for nothing audio
-const nothingSeek = document.getElementById("nothing-seek"); // Seek input for nothing audio
-const nothingBackBtn = document.getElementById("nothing-backward-btn");
-const nothingForwardBtn = document.getElementById("nothing-forward-btn");
-
-nothingBtn.addEventListener("click", () => {
-  if (nothingAudio.paused) {
-    nothingAudio.volume = 0.5;
-    nothingAudio.play();
-  } else {
-    nothingAudio.pause();
-  }
-  // Toggle the visibility of the play and pause buttons
-  nothingPauseBtn.classList.toggle("hidden", nothingAudio.paused); // Show pause button when not playing
-  nothingPlayBtnImg.classList.toggle("hidden", !nothingAudio.paused); // Show play button when paused
-});
-
-nothingAudio.addEventListener("timeupdate", () => {
-  // Calculate the progress as a percentage
-  const progress = (nothingAudio.currentTime / nothingAudio.duration) * 100;
-  nothingSeek.value = progress; // Update the seek input value
-});
-
-// Backward button
-nothingBackBtn.addEventListener("click", () => {
-  nothingAudio.currentTime = Math.max(
-    0,
-    nothingAudio.currentTime - backDuration
-  );
-});
-
-// Forward button
-nothingForwardBtn.addEventListener("click", () => {
-  nothingAudio.currentTime = Math.max(
-    0,
-    nothingAudio.currentTime + forwardDuration
-  );
-});
-
-// Seek to the new time when the user interacts with the range input
-nothingSeek.addEventListener("input", () => {
-  const seekTime = (nothingSeek.value / 100) * nothingAudio.duration; // Calculate the time based on range input
-  nothingAudio.currentTime = seekTime; // Update the audio's current time
-});
-
-nothingAudio.addEventListener("ended", () => {
-  nothingPauseBtn.classList.add("hidden");
-  nothingPlayBtnImg.classList.remove("hidden");
-  nothingSeek.value = 0;
-});
-
-// Audio elements
-const getAudio = new Audio("assets/audio/Get You (feat. Kali Uchis) (1).mp3");
-
-// get audio player
-const getBtn = document.getElementById("get-btn");
-const getPlayBtnImg = document.getElementById("get-btn-img");
-const getPauseBtn = document.getElementById("get-pause-btn-img");
-
-const getProgress = document.getElementById("get-progress"); // Progress bar for get audio
-const getSeek = document.getElementById("get-seek"); // Seek input for get audio
-const getBackBtn = document.getElementById("get-backward-btn");
-const getForwardBtn = document.getElementById("get-forward-btn");
-
-getBtn.addEventListener("click", () => {
-  if (getAudio.paused) {
-    getAudio.volume = 0.4;
-    getAudio.play();
-  } else {
-    getAudio.pause();
-  }
-  // Toggle the visibility of the play and pause buttons
-  getPauseBtn.classList.toggle("hidden", getAudio.paused); // Show pause button when not playing
-  getPlayBtnImg.classList.toggle("hidden", !getAudio.paused); // Show play button when paused
-});
-
-getAudio.addEventListener("timeupdate", () => {
-  // Calculate the progress as a percentage
-  const progress = (getAudio.currentTime / getAudio.duration) * 100;
-  getSeek.value = progress; // Update the seek input value
-});
-
-// Backward button
-getBackBtn.addEventListener("click", () => {
-  getAudio.currentTime = Math.max(0, getAudio.currentTime - backDuration);
-});
-
-// Forward button
-getForwardBtn.addEventListener("click", () => {
-  getAudio.currentTime = Math.max(0, getAudio.currentTime + forwardDuration);
-});
-
-// Seek to the new time when the user interacts with the range input
-getSeek.addEventListener("input", () => {
-  const seekTime = (getSeek.value / 100) * getAudio.duration; // Calculate the time based on range input
-  getAudio.currentTime = seekTime; // Update the audio's current time
-});
-
-getAudio.addEventListener("ended", () => {
-  getPauseBtn.classList.add("hidden");
-  getPlayBtnImg.classList.remove("hidden");
-  getSeek.value = 0;
-});
-
 // memory lane section
 new Swiper(".swiper", {
   direction: "horizontal",
   loop: true,
-  speed: 1000,
+  speed: 500,
   spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",
@@ -318,10 +95,11 @@ balloons.forEach((balloon, index) => {
   });
 });
 
-// note generator
+// note genrator
 const noteText = document.getElementById("note-text");
 const noteBtn = document.getElementById("note-generator-btn");
 let phrasesData = [];
+let availableIndexes = []; // To keep track of available indexes
 
 fetch("assets/phrases_and_reminders.json")
   .then(function (response) {
@@ -329,33 +107,55 @@ fetch("assets/phrases_and_reminders.json")
   })
   .then(function (obj) {
     phrasesData = obj;
+    availableIndexes = [...Array(phrasesData.length).keys()]; // Initialize with all indexes
   })
   .catch(function (error) {
     console.error("Something went wrong with retrieving the data");
     console.log(error);
   });
+
 noteBtn.addEventListener("click", () => {
-  const randomNum = Math.round(Math.random() * 30) + 1;
-  noteText.innerText = phrasesData[randomNum].content;
+  if (availableIndexes.length === 0) {
+    // Reset when all notes are used
+    availableIndexes = [...Array(phrasesData.length).keys()];
+  }
+
+  // Get a random index from availableIndexes
+  const randomIndex = Math.floor(Math.random() * availableIndexes.length);
+  const selectedNoteIndex = availableIndexes[randomIndex];
+
+  // Remove the used index from availableIndexes
+  availableIndexes.splice(randomIndex, 1);
+
+  // Display the content of the selected note
+  noteText.innerText = phrasesData[selectedNoteIndex].content;
 });
 
-// Fetch random picture from JSON file
 fetch("assets/pictures.json")
   .then((response) => response.json())
   .then((data) => {
-    // Listen for the camera button click
+    let availableIndexes = [...Array(data.pictures.length).keys()]; // Create an array of indexes [0,1,2,...]
+
     document
       .getElementById("camera-btn")
       .addEventListener("click", function () {
+        if (availableIndexes.length === 0) {
+          // Reset when all pictures are used
+          availableIndexes = [...Array(data.pictures.length).keys()];
+        }
+
+        // Get a random index from the availableIndexes
+        const randomIndex = Math.floor(Math.random() * availableIndexes.length);
+        const selectedPictureIndex = availableIndexes[randomIndex];
+        availableIndexes.splice(randomIndex, 1); // Remove the used index
+
         // Create a new photo div
         const newPhoto = document.createElement("div");
         newPhoto.classList.add("photo");
 
         // Create an image element inside the div
-        const randomPicture =
-          data.pictures[Math.floor(Math.random() * data.pictures.length)];
         const img = document.createElement("img");
-        img.src = randomPicture.url; // Use the random image URL from the fetched JSON
+        img.src = data.pictures[selectedPictureIndex].url;
         newPhoto.appendChild(img);
 
         // Append the photo div to the photo container
@@ -367,19 +167,19 @@ fetch("assets/pictures.json")
           newPhoto.classList.add("active");
         }, 100);
 
-        // Optionally, add a print-out sound (can use an audio file or Web Audio API)
+        // Play camera shutter sound
         const printSound = new Audio(
           "assets/audio/Camera Shutter Sound Effect.mp3"
         );
         printSound.play();
 
-        // Add a small delay and remove the photo after a few seconds to simulate printing
+        // Remove the photo after 10 seconds
         setTimeout(() => {
           newPhoto.classList.remove("active");
           setTimeout(() => {
             photoContainer.removeChild(newPhoto);
-          }, 500); // Wait for the animation to finish before removing it
-        }, 10000); // After 10 seconds, remove the image to simulate the photo print-out
+          }, 500);
+        }, 10000);
       });
   })
   .catch((error) => console.error("Error loading pictures:", error));
